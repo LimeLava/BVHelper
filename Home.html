@@ -7,34 +7,50 @@
 <link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
 <script src="jquery-mobile/jquery-1.11.1.min.js"></script>
 <script src="jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  in
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
 </head>
 
 <body>
-	
+<div>
   <div class="header">
-     <center>  
-	    <table border="0" cellpadding="2" cellspacing="2" width="770">
-         <tbody>
-          <tr>
-            <th scope="col" height="36" width="75">
-				<input type="checkbox" name="Fields" value="layer1">Fields<br>
-			  </th>
-			<th scope="col" height="36" width="75">
-				<input type="checkbox" name="Restrooms" value="layer2">Restrooms<br>
-			</th>
-			<th scope="col" height="36" width="75">
-				<input type="checkbox" name="Parking" value="layer3">Parking<br>
-			  </th>
-		  </tr>
-		 </tbody>
-	    </table>
-	</center>
+	    <ul>
+			<li><a class="active" href="#home">Home</a></li>
+  			<li><a href="#news">News</a></li>
+  			<li><a href="#contact">Contact</a></li>
+  			<li><a href="#about">About</a></li>
+		</ul>
   </div>
 	
   <div class="Map">
-	  <img src="Field.png">
+	  <img src="Field.png" width="1000">
   </div>
-	
+</div>	
 </body>
 	
 	
