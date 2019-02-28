@@ -12,14 +12,11 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  left:0;
-  top:50%;
-  height: 100%; 
-  display: block;
+  height: 100%;
+  display: table;
   margin-left: auto;
   margin-right: auto;
   background-color: #333;
- 
   position: sticky;
   overflow: auto; 
   
@@ -43,10 +40,14 @@ li a {
 li a:hover {
   background-color: #111;
 }
+img{
+  width: auto;
+  height: 95vh;
+}
 </style>
 </head>
 
-<body>
+<body style="background-color:#333;">
 <div>
   <div class="header">
 	    <ul>
@@ -57,8 +58,8 @@ li a:hover {
 		</ul>
   </div>
 	
-  <div class="Map" style="position: relative; overflow: auto;">
-	  <img src="Field.png" width="1000">
+  <div class="Map" style="position: center; overflow: auto;">
+	  <img src="Field.png">
   </div>
 </div>	
 </body>
