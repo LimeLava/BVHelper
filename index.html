@@ -12,12 +12,22 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  left:0;
+  top:50%;
+  height: 100%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #333;
-  position: fixed;
-  in
+ 
+  position: sticky;
+  overflow: auto; 
+  
 }
 
+.tab {
+  overflow-x: scroll;
+  }
 li {
   float: left;
 }
@@ -47,7 +57,7 @@ li a:hover {
 		</ul>
   </div>
 	
-  <div class="Map">
+  <div class="Map" style="position: relative; overflow: auto;">
 	  <img src="Field.png" width="1000">
   </div>
 </div>	
