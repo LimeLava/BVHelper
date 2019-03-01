@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.BVRec.BVRecApp"
+	version     = "1.0.0" >
+<!-- versionCode = "10" -->
+
+<!-- versionCode is optional and Android only -->
+
+  <name>BV Rec App</name>
+  
+  <icon src="icon.png" />
+
+  <description>
+      Designed to help visitors find fields, restrooms, parking, food, etc. as well as including access to other important 
+	  information to the Blue Valley Recreation complex.
+  </description>
+
+  <author href="http://www.bluevalleyrec.org/">
+      Blue Valley Rec
+  </author>
+
+</widget>
+
+<!-- http://docs.phonegap.com/phonegap-build/configuring/ -->
