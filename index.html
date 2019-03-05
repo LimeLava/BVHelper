@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html style="position: relative; overflow-y: hidden;">
 <head>
 <meta charset="utf-8">
 <title>BVHelper</title>
@@ -12,12 +12,19 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  in
+  height: 100%;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #205aad;
+  position: sticky;
+  overflow: auto; 
+  
 }
 
+.tab {
+  overflow-x: scroll;
+  }
 li {
   float: left;
 }
@@ -33,22 +40,25 @@ li a {
 li a:hover {
   background-color: #111;
 }
+img{
+  width: auto;
+  height: 95vh;
+}
 </style>
 </head>
 
-<body>
+<body style="background-color:#494949;">
 <div>
   <div class="header">
 	    <ul>
-			<li><a class="active" href="#home">Home</a></li>
-  			<li><a href="#news">News</a></li>
-  			<li><a href="#contact">Contact</a></li>
-  			<li><a href="#about">About</a></li>
+			<li><a class="active" href="#home">Fields</a></li>
+  			<li><a href="#news">Parking</a></li>
+  			<li><a href="#contact">Restroom/Conssesion</a></li>
 		</ul>
   </div>
 	
-  <div class="Map">
-	  <img src="Field.png" width="1000">
+  <div class="Map" style="position: center; overflow: auto;">
+	  <img src="Field.png">
   </div>
 </div>	
 </body>
