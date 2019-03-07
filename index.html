@@ -21,6 +21,18 @@ ul {
   overflow: auto; 
   
 }
+	
+.circle {
+  display:block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 25px;
+  bottom: 25px;
+  border-radius: 50%;
+  border: 1px solid red;
+  
+}
 
 .tab {
   overflow-x: scroll;
@@ -57,10 +69,11 @@ img{
   width: auto;
   height: 92vh;
 }
+
 </style>
 </head>
 
-<body style="background-color:#494949;">
+<body style="background-color:#205aad;">
 <div>
   <div class="header">
 	    <ul>
@@ -68,9 +81,16 @@ img{
   			<li><a href="#news"><img src="Pictures/ParkingYellow.png" class="headitems"></a></li>
   			<li><a href="#contact"><img src="Pictures/RestroomAndConcessionsYellow.png" class="headitems"></a></li>
 		</ul>
+  </div>
+  
+
   <div class="Map" style="position: center; overflow: auto;">
 	  <img src="Pictures/Field.png">
+	    <div class="Circle">
+			<img src="Pictures/Parking.png" class="circle">
+  		</div>
   </div>
+	
 </div>	
 </body>
 	
