@@ -8,16 +8,18 @@
 <!-- versionCode is optional and Android only -->
 
   <name>BV Rec Helper</name>
-  
+  <preference name="orientation" value="portrait" />
+  <preference name="SplashScreen" value="splash" />
   <icon src="Pictures/icon.png" />
   
-  <splash src="Pictures/splash.jpg" />
+  <splash src="Pictures/splash.png" />
 
   <description>
-      Designed to help visitors find fields, restrooms, parking, food, etc. as well as including access to other important 
-	  information to the Blue Valley Recreation complex.
+      Designed to help visitors find fields, restrooms, parking, food, and more! Also includes
+	  access to other important information to the Blue Valley Recreation complex.
   </description>
-
+  
+	
   <author href="http://www.bluevalleyrec.org/">
       Blue Valley Rec
   </author>
