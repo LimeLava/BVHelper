@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>BVHelper</title>
-<link href="Home-CSS.css" rel="stylesheet" type="text/css">
+<link href="Home-CSS.css" rel="stylesheet" type="text/css" media="screen and (orientation: portrait)">
 <link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
 <script src="jquery-mobile/jquery-1.11.1.min.js"></script>
 <script src="jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
@@ -19,6 +19,16 @@ ul {
   background-color: #205aad;
   position: sticky;
   overflow: auto; 
+  
+}
+	
+.circle {
+  display:block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 15px;
+  bottom: 15px;
   
 }
 
@@ -57,10 +67,11 @@ img{
   width: auto;
   height: 92vh;
 }
+
 </style>
 </head>
 
-<body style="background-color:#494949;">
+<body style="background-color:#205aad;">
 <div>
   <div class="header">
 	    <ul>
@@ -68,10 +79,22 @@ img{
   			<li><a href="#news"><img src="Pictures/ParkingYellow.png" class="headitems"></a></li>
   			<li><a href="#contact"><img src="Pictures/RestroomAndConcessionsYellow.png" class="headitems"></a></li>
 		</ul>
+  </div>
+  
+
   <div class="Map" style="position: center; overflow: auto;">
 	  <img src="Pictures/Field.png">
+	    <div class="Circle">
+			<img src="Pictures/menuIcon.png" class="circle">
+  		</div>
   </div>
+	
 </div>	
+
+<script>
+	
+</script>
+	
 </body>
 	
 	

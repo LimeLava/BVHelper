@@ -10,6 +10,8 @@
   <name>BV Rec Helper</name>
   
   <icon src="Pictures/icon.png" />
+  
+  <splash src="Pictures/splash.jpg" />
 
   <description>
       Designed to help visitors find fields, restrooms, parking, food, etc. as well as including access to other important 
