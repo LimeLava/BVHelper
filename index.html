@@ -93,7 +93,7 @@ img{
   <div class="Map" style="position: center; overflow: auto;">
 	  <img src="Pictures/MapPics/Field.png">
 	    <div class="menuBt">
-			<img src="Pictures/Icons/exitIcon.png" class="menuBt" id="exitIcon">
+			<img src="Pictures/Icons/exitIcon.png" class="menuBt" id="exitIcon" onClick="hide()">
 			<img src="Pictures/Icons/helpIcon.png" class="listBt" id="helpIcon">
 			<img src="Pictures/Icons/fieldListIcon.png" class="listBt" id="fieldListIcon">
 			<img src="Pictures/Icons/eventsIcon.png" class="listBt" id="eventsIcon">
@@ -111,45 +111,58 @@ function show() {
 	var events = document.getElementById("eventsIcon"); var eventsPos = 116; var eventsOp = 0;
 	var directions = document.getElementById("directionsIcon"); var directionsPos = 164; var directionsOp = 0;
 	var exit = document.getElementById("exitIcon");
-	var id = setInterval(frame, 10);
+	var id = setInterval(frame, 1);
 	function frame() {		
-		if (helpPos == 68) {
-			clearInterval(id);
+		if (helpPos == 68) {												<!--starts to display help icon-->
+			if (fieldsPos == 116) {											<!--starts to display field list icon-->
+				if (eventsPos == 164) {										<!--starts to display events list icon-->
+					if (directionsPos == 212) {								<!--starts to display directions icon-->
+						clearInterval(id);
+					}else {
+						directionsPos++;
+						directions.style.bottom = directionsPos + 'px';
+						directionsOp += 0.02;
+						directions.style.opacity = directionsOp;
+					}
+				}else {
+					eventsPos++;
+					events.style.bottom = eventsPos + 'px';
+					eventsOp += 0.02;
+					events.style.opacity = eventsOp;
+				}
+			}else {
+				fieldsPos++;
+				fields.style.bottom = fieldsPos + 'px';
+				fieldsOp += 0.02;
+				fields.style.opacity = fieldsOp;
+			}
+			
 		}else {
 			helpPos++;
 			help.style.bottom = helpPos + 'px';
 			helpOp += 0.02;
 			help.style.opacity = helpOp;
 		}
-		
-		if (fieldsPos == 116) {
-			
-		}else {
-			fieldsPos++;
-			fields.style.bottom = fieldsPos + 'px';
-			fieldsOp += 0.02;
-			fields.style.opacity = fieldsOp;
-		}
-		
-		if (eventsPos == 164) {
-			
-		}else {
-			eventsPos++;
-			events.style.bottom = eventsPos + 'px';
-			eventsOp += 0.02;
-			events.style.opacity = eventsOp;
-		}
-		
-		if (directionsPos == 212) {
-			
-		}else {
-			directionsPos++;
-			directions.style.bottom = directionsPos + 'px';
-			directionsOp += 0.02;
-			directions.style.opacity = directionsOp;
-		}
 	}
 	exit.style.zIndex = 1;
+}
+
+function hide() {														<!--Hides list buttons behind menu button and sets opacity to 0-->
+	var help = document.getElementById("helpIcon");
+	var fields = document.getElementById("fieldListIcon");
+	var events = document.getElementById("eventsIcon");
+	var directions = document.getElementById("directionsIcon");
+	var exit = document.getElementById("exitIcon");
+	
+	help.style.bottom = 10 + 'px';
+	help.style.opacity = 0;
+	fields.style.bottom = 10 + 'px';
+	fields.style.opacity = 0;
+	events.style.bottom = 10 + 'px';
+	events.style.opacity = 0;
+	directions.style.bottom = 10 + 'px';
+	directions.style.opacity = 0;
+	exit.style.zIndex = -1;
 }
 </script>
 	
