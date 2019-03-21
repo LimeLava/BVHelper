@@ -27,8 +27,17 @@ ul {
   position: absolute;
   height: 50px;
   width: 50px;
+  right: 10px;
+  bottom: 10px;
+  
+}
+
+.listBt {
+  opacity: 1;
+  display:block;
+  position: absolute;
+  height: 80%;
   right: 15px;
-  bottom: 15px;
   
 }
 
@@ -85,6 +94,10 @@ img{
   <div class="Map" style="position: center; overflow: auto;">
 	  <img src="Pictures/MapPics/Field.png">
 	    <div class="menuBt">
+			<img src="Pictures/Icons/helpIcon.png" id="help" style="bottom: 68px;" class="listBt" onClick="show()">
+			<img src="Pictures/Icons/fieldListIcon.png" id="help" style="bottom: 116px;" class="listBt">
+			<img src="Pictures/Icons/eventsIcon.png" style="bottom: 164px;" class="listBt">
+			<img src="Pictures/Icons/directionsIcon.png" style="bottom: 212px;" class="listBt">
 			<img src="Pictures/Icons/menuIcon.png" class="menuBt">
   		</div>
   </div>
@@ -92,7 +105,19 @@ img{
 </div>	
 
 <script>
-	
+function show() {
+	var bt = document.getElementById("listBt");
+	var pos = -20;
+	var id = setInterval(frame, 10);
+	function frame() {
+		if (pos == 0) {
+			clearInterval(id);
+		}else {
+			pos++;
+			bt.style.bottom = pos + 'px';
+		}
+	}
+}
 </script>
 	
 </body>
