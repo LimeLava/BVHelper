@@ -33,12 +33,11 @@ ul {
 }
 
 .listBt {
-  opacity: 1;
-  display:block;
+  opacity: 0;
   position: absolute;
   height: 80%;
   right: 15px;
-  
+  bottom: 10px
 }
 
 .tab {
@@ -94,11 +93,12 @@ img{
   <div class="Map" style="position: center; overflow: auto;">
 	  <img src="Pictures/MapPics/Field.png">
 	    <div class="menuBt">
-			<img src="Pictures/Icons/helpIcon.png" id="help" style="bottom: 68px;" class="listBt" onClick="show()">
-			<img src="Pictures/Icons/fieldListIcon.png" id="help" style="bottom: 116px;" class="listBt">
-			<img src="Pictures/Icons/eventsIcon.png" style="bottom: 164px;" class="listBt">
-			<img src="Pictures/Icons/directionsIcon.png" style="bottom: 212px;" class="listBt">
-			<img src="Pictures/Icons/menuIcon.png" class="menuBt">
+			<img src="Pictures/Icons/exitIcon.png" class="menuBt" id="exitIcon">
+			<img src="Pictures/Icons/helpIcon.png" class="listBt" id="helpIcon">
+			<img src="Pictures/Icons/fieldListIcon.png" class="listBt" id="fieldListIcon">
+			<img src="Pictures/Icons/eventsIcon.png" class="listBt" id="eventsIcon">
+			<img src="Pictures/Icons/directionsIcon.png" class="listBt" id="directionsIcon">
+			<img src="Pictures/Icons/menuIcon.png" class="menuBt" onClick="show()">
   		</div>
   </div>
 	
@@ -106,17 +106,50 @@ img{
 
 <script>
 function show() {
-	var bt = document.getElementById("listBt");
-	var pos = -20;
+	var help = document.getElementById("helpIcon"); var helpPos = 20; var helpOp = 0;
+	var fields = document.getElementById("fieldListIcon"); var fieldsPos = 68; var fieldsOp = 0;
+	var events = document.getElementById("eventsIcon"); var eventsPos = 116; var eventsOp = 0;
+	var directions = document.getElementById("directionsIcon"); var directionsPos = 164; var directionsOp = 0;
+	var exit = document.getElementById("exitIcon");
 	var id = setInterval(frame, 10);
-	function frame() {
-		if (pos == 0) {
+	function frame() {		
+		if (helpPos == 68) {
 			clearInterval(id);
 		}else {
-			pos++;
-			bt.style.bottom = pos + 'px';
+			helpPos++;
+			help.style.bottom = helpPos + 'px';
+			helpOp += 0.02;
+			help.style.opacity = helpOp;
+		}
+		
+		if (fieldsPos == 116) {
+			
+		}else {
+			fieldsPos++;
+			fields.style.bottom = fieldsPos + 'px';
+			fieldsOp += 0.02;
+			fields.style.opacity = fieldsOp;
+		}
+		
+		if (eventsPos == 164) {
+			
+		}else {
+			eventsPos++;
+			events.style.bottom = eventsPos + 'px';
+			eventsOp += 0.02;
+			events.style.opacity = eventsOp;
+		}
+		
+		if (directionsPos == 212) {
+			
+		}else {
+			directionsPos++;
+			directions.style.bottom = directionsPos + 'px';
+			directionsOp += 0.02;
+			directions.style.opacity = directionsOp;
 		}
 	}
+	exit.style.zIndex = 1;
 }
 </script>
 	
