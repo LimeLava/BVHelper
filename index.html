@@ -94,10 +94,10 @@ img{
 	  <img src="Pictures/MapPics/Field.png">
 	    <div class="menuBt">
 			<img src="Pictures/Icons/exitIcon.png" class="menuBt" id="exitIcon" onClick="hide()">
-			<img src="Pictures/Icons/helpIcon.png" class="listBt" id="helpIcon">
+			<a href="testpage.html"><img src="Pictures/Icons/helpIcon.png" class="listBt" id="helpIcon"></a>
 			<img src="Pictures/Icons/fieldListIcon.png" class="listBt" id="fieldListIcon">
 			<img src="Pictures/Icons/eventsIcon.png" class="listBt" id="eventsIcon">
-			<a href="https://goo.gl/maps/jMXy2RYEpgs"><img src="Pictures/Icons/directionsIcon.png" class="listBt" id="directionsIcon"></a>
+			<img src="Pictures/Icons/directionsIcon.png" class="listBt" id="directionsIcon" onClick="map()">
 			<img src="Pictures/Icons/menuIcon.png" class="menuBt" onClick="show()">
   		</div>
   </div>
@@ -117,6 +117,7 @@ function show() {
 			if (fieldsPos == 116) {											<!--starts to display field list icon-->
 				if (eventsPos == 164) {										<!--starts to display events list icon-->
 					if (directionsPos == 212) {								<!--starts to display directions icon-->
+						exit.style.zIndex = 1;
 						clearInterval(id);
 					}else {
 						directionsPos++;
@@ -144,7 +145,6 @@ function show() {
 			help.style.opacity = helpOp;
 		}
 	}
-	exit.style.zIndex = 1;
 }
 
 function hide() {														<!--Hides list buttons behind menu button and sets opacity to 0-->
@@ -163,6 +163,9 @@ function hide() {														<!--Hides list buttons behind menu button and set
 	directions.style.bottom = 10 + 'px';
 	directions.style.opacity = 0;
 	exit.style.zIndex = -1;
+}
+function map() {
+	cordova.InAppBrowser.open('https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/the-whitelist-system.md', '_blank');
 }
 </script>
 	

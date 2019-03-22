@@ -19,6 +19,11 @@
 	  access to other important information to the Blue Valley Recreation complex.
   </description>
   
+  <plugin name="cordova-plugin-inappbrowser" version="3.0.0"/>
+  
+  <feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+	</feature>
 	
   <author href="http://www.bluevalleyrec.org/">
       Blue Valley Rec
