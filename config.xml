@@ -2,7 +2,7 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.BVRec.BVRecApp"
-	version     = "1.0.0" >
+	version     = "0.0.1" >
 <!-- versionCode = "10" -->
 
 <!-- versionCode is optional and Android only -->
@@ -19,7 +19,9 @@
 	  access to other important information to the Blue Valley Recreation complex.
   </description>
   
-  <plugin name="cordova-plugin-inappbrowser" version="3.0.0"/>
+  <access origin="*"/>
+  
+  <plugin name="cordova-plugin-inappbrowser" value="org.apache.cordova.InAppBrowser"/>
   
   <feature name="InAppBrowser">
     <param name="android-package" value="org.apache.cordova.InAppBrowser" />

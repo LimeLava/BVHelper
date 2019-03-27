@@ -96,7 +96,7 @@ img{
 	  <img src="Pictures/MapPics/Field.png">
 	    <div class="menuBt">
 			<img src="Pictures/Icons/exitIcon.png" class="menuBt" id="exitIcon" onClick="hide()">
-			<img src="Pictures/Icons/helpIcon.png" class="listBt" id="helpIcon" onclick="window.open('https://www.google.com/maps', '_system');">
+			<a href="http://stackoverflow.com"  target="_blank"><img src="Pictures/Icons/helpIcon.png" class="listBt" id="helpIcon"></a>
 			<img src="Pictures/Icons/fieldListIcon.png" class="listBt" id="fieldListIcon">
 			<img src="Pictures/Icons/eventsIcon.png" class="listBt" id="eventsIcon">
 			<img src="Pictures/Icons/directionsIcon.png" class="listBt" id="directionsIcon" onClick="map()">
@@ -165,6 +165,36 @@ function hide() {														<!--Hides list buttons behind menu button and set
 	directions.style.bottom = 10 + 'px';
 	directions.style.opacity = 0;
 	exit.style.zIndex = -1;
+}
+
+function onDeviceReady() {
+
+    // Mock device.platform property if not available
+    if (!window.device) {
+        window.device = { platform: 'Browser' };
+    }
+
+    handleExternalURLs();
+}
+function handleExternalURLs() {
+    // Handle click events for all external URLs
+    if (device.platform.toUpperCase() === 'ANDROID') {
+        $(document).on('click', 'a[href^="http"]', function (e) {
+            var url = $(this).attr('href');
+            navigator.app.loadUrl(url, { openExternal: true });
+            e.preventDefault();
+        });
+    }
+    else if (device.platform.toUpperCase() === 'IOS') {
+        $(document).on('click', 'a[href^="http"]', function (e) {
+            var url = $(this).attr('href');
+            window.open(url, '_system');
+            e.preventDefault();
+        });
+    }
+    else {
+        // Leave standard behaviour
+    }
 }
 </script>
 	
