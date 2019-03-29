@@ -47,9 +47,16 @@
 	<body style="background-color:#205aad;">
 	<div class="header">
 		<ul>
-			<li><a class="active"><img src="Pictures/Icons/BackIcon.png" class="headitems" onClick="window.open('index.html', '_blank', 'location=yes')"> </a></li>
+			<li><a class="active"><img src="Pictures/Icons/BackIcon.png" class="headitems" onClick="onBackKeyDown()"> </a></li>
 		</ul>
 	</div>
+	
+	<script>
+	function onBackKeyDown() {
+    history.go(-1);
+    navigator.app.backHistory();
+	}
+	</script>
 	
 	</body>
 </html>
