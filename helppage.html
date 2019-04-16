@@ -44,14 +44,54 @@
 	li a:hover {
 	 background-color: #2c78e4;
 	}
+	
+	#grad {
+	 background-image: linear-gradient(#15336F, #5464d1);
+	}
+	
+	.text {
+	 text-align: center;
+	 color: white;
+	}
+	
+	th, td {
+	 padding: 5px;
+	 text-align: left;
+	}
+	
+	.tblitems {
+	 width:100%;
+	}
 	</style>	
 	</head>
-	<body style="background-color:#F5F5F5;">
+	<body id="grad">
 	<div class="header">
 		<ul>
 			<li><a class="active"><img src="Pictures/Icons/BackIcon.png" class="headitems" onClick="onBackKeyDown()"> </a></li>
 		</ul>
 	</div>
+	
+	<img src="Pictures\HelpPageIcons\bvrecIcon.jpg" style="width:90px;margin-top:25px;display:block;margin-left:auto;margin-right:auto;">
+	
+	<div class="text" style="margin-top:25px;">
+	 <i><strong><p>Sports Complex</p></strong></i>
+		<strong><p>9701 West 137th Street</p></strong>
+		<strong><p>913-685-6030</p></strong>
+		<strong><p>Office Hours: M-F 8:00A-4:30P</p></strong>
+	</div>
+	
+	<table style="width:100%;margin-top:25px;">
+		<tr>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="window.open('FieldList/2.html', '_blank', 'location=yes')"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="window.open('FieldList/2.html', '_blank', 'location=yes')"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="window.open('FieldList/2.html', '_blank', 'location=yes')"></td>
+		</tr>
+		<tr>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="window.open('FieldList/2.html', '_blank', 'location=yes')"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="window.open('FieldList/2.html', '_blank', 'location=yes')"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="window.open('FieldList/2.html', '_blank', 'location=yes')"></td>
+		</tr>
+	</table>
 	
 	<script>
 	function onBackKeyDown() {
