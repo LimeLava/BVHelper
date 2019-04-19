@@ -45,10 +45,6 @@
 	 background-color: #2c78e4;
 	}
 	
-	#grad {
-	 background-image: linear-gradient(#15336F, #5464d1);
-	}
-	
 	.text {
 	 text-align: center;
 	 color: white;
@@ -62,9 +58,17 @@
 	.tblitems {
 	 width:100%;
 	}
+	
+	#bg {
+	background-image: url("Pictures/HelpPageIcons/background.jpg");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
 	</style>	
 	</head>
-	<body id="grad">
+	<body id="bg">
 	<div class="header">
 		<ul>
 			<li><a class="active"><img src="Pictures/Icons/BackIcon.png" class="headitems" onClick="onBackKeyDown()"> </a></li>
@@ -82,14 +86,14 @@
 	
 	<table style="width:100%;margin-top:25px;">
 		<tr>
-			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="window.open('https://www.pinterest.com/bluevalleyrec/', '_blank', 'location=yes')"></td>
-			<td><img class="tblitems" src="Pictures/HelpPageIcons/facebookIcon.png" onClick="window.open('https://www.facebook.com/bluevalleyrecreation?scrlybrkr=00cc2dc3', '_blank', 'location=yes')"></td>
-			<td><img class="tblitems" src="Pictures/HelpPageIcons/twitterIcon.png" onClick="window.open('https://twitter.com/bluevalleyrec?scrlybrkr=87e4df18', '_blank', 'location=yes')"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/pinterestIcon.png" onClick="pinterest()"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/facebookIcon.png" onClick="facebook()"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/twitterIcon.png" onClick="twitter()"></td>
 		</tr>
 		<tr>
-			<td><img class="tblitems" src="Pictures/HelpPageIcons/linkedinIcon.png" onClick="window.open('https://www.linkedin.com/company/blue-valley-recreation', '_blank', 'location=yes')"></td>
-			<td><img class="tblitems" src="Pictures/HelpPageIcons/youtubeIcon.png" onClick="window.open('https://www.youtube.com/user/BlueValleyRec?feature=watch', '_blank', 'location=yes')"></td>
-			<td><img class="tblitems" src="Pictures/HelpPageIcons/instagramIcon.png" onClick="window.open('https://www.instagram.com/bluevalleyrecreation/', '_blank', 'location=yes')"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/linkedinIcon.png" onClick="linkedin()"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/youtubeIcon.png" onClick="youtube()"></td>
+			<td><img class="tblitems" src="Pictures/HelpPageIcons/instagramIcon.png" onClick="instagram()"></td>
 		</tr>
 	</table>
 	
@@ -97,6 +101,24 @@
 	function onBackKeyDown() {
     history.go(-1);
     navigator.app.backHistory();
+	}
+	function pinterest() {
+	window.open('https://www.pinterest.com/bluevalleyrec/', '_blank', 'location=yes');
+	}
+	function facebook() {
+	window.open('https://www.facebook.com/bluevalleyrecreation?scrlybrkr=00cc2dc3', '_blank', 'location=yes');
+	}
+	function twitter() {
+	window.open('https://twitter.com/bluevalleyrec?scrlybrkr=87e4df18', '_blank', 'location=yes');
+	}
+	function linkedin() {
+	window.open('https://www.linkedin.com/company/blue-valley-recreation', '_blank', 'location=yes');
+	}
+	function youtube() {
+	window.open('https://www.youtube.com/user/BlueValleyRec?feature=watch', '_blank', 'location=yes');
+	}
+	function instagram() {
+	window.open('https://www.instagram.com/bluevalleyrecreation/', '_blank', 'location=yes');
 	}
 	</script>
 	
