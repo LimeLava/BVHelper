@@ -11,10 +11,18 @@
 	<script src="../plugins/cordova-plugin-inappbrowser/www/inappbrowser.js"></script>
 	<style>
 	img{
-		width: 90vw;
+		width: 100vw;
 		height: auto;
+	}
+	.menuBt {
+		display:block;
+		position: absolute;
+		width: 125px;
 		margin-left: auto;
 		margin-right: auto;
+		
+		
+  
 	}
 	ul {
 		list-style-type: none;
@@ -71,5 +79,9 @@
 	<div>
 		<img src="../Pictures/Field3.png">
 	</div>
+	<div class="menuBt">
+			<img src="../Pictures/Icons/topdownIcon.png" class="menuBt" onClick="show()">
+			<img src="../Pictures/Icons/onsiteIcon.png" class="menuBt" onClick="show()">
+  		</div>
 	</body>
 </html>
