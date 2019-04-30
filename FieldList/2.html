@@ -10,10 +10,19 @@
 	<script src="../jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
 	<script src="../plugins/cordova-plugin-inappbrowser/www/inappbrowser.js"></script>
 	<style>
-	.fieldimg{
+	.fieldImage{
 		width: 100vw;
 		height: auto;
 		margin-right:10px;
+		z-index = 1;
+		position: absolute;
+	}
+	.topImage{
+		width: 100vw;
+		height: auto;
+		margin-right:10px;
+		z-index = 0;
+		position: absolute;
 	}
 	.menuBt {
 		position: absolute;
@@ -76,9 +85,11 @@
 		</ul>
 	</div>
 	<div>
-		<img src="../Pictures/Field3.png" class="fieldimg">
-		<img src="../Pictures/Icons/topdownIcon.png" class="menuBt">
-		<img src="../Pictures/Icons/onsiteIcon.png" class="menuBt">
+		<img src="../Pictures/OnSitePics/2.jpg" class="fieldImage">
+		<img src="../Pictures/Field3.png" class="fieldImage">
+		<img src="../Pictures/Icons/onsiteIcon.png" class="menuBt" onClick="switchImage()">
+		<img src="../Pictures/Icons/topdownIcon.png" class="menuBt" onClick="switchImage()">
+		
   	</div>
 	<!--<div style="margin-top:75px;margin-left:10px;margin-right:20px;margin-bottom:50px">
 		<b>Directions:</b>
@@ -88,6 +99,14 @@
 	</div>-->
 	
 	<script>
+	function switchImage(){
+		var fieldImage = document.getElementById("fieldImage"); var fieldZIndex = fieldImage.style.z-index;
+		var topImage = document.getElementById("topImage"); var topZIndex = topImage.style.z-index;
+		var temp = fieldZIndex;
+		fieldImage.style.z-index = topZIndex;
+		topImage.style.z-index = temp;
+		
+	}
 	function onBackKeyDown() {
     history.go(-1);
     navigator.app.backHistory();
