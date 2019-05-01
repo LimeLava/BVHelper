@@ -100,11 +100,10 @@
 		<img src="../Pictures/Icons/white.jpg" id="whiteImage">
 	</div>
 	<div style="position: relative">
-		<img src="../Pictures/Icons/onsiteIcon.jpg" class="menuBt" id="onSite" onClick="switchImage()">
-		<img src="../Pictures/Icons/topdownIcon.jpg" class="menuBt" id="top" onClick="switchImage()">
+		<img src="../Pictures/Icons/onsiteIcon.jpg" style="z-index: 6;" class="menuBt" id="onSite" onClick="switchImage()"><img src="../Pictures/Icons/topdownIcon.jpg" style="z-index: 5;" class="menuBt" id="top" onClick="switchImage()">
 	</div>
 
-	<div style="margin-top:86vw; margin-left:5px; margin-right: 5px;">
+	<div style="margin-top:86vw; margin-left:5px; margin-right: 5px;z-index: 10;position: absolute;">
 		<b>Directions:</b>
 		<p>
 			In between Antioch and Switzer on the south side of 137th Street. There are several entrances to the parking lot and the closest to the field entrance is a block west of Grandview Street. There is a short walk from the entrance to the field. Restrooms, a playground, administration offices, and concessions are available.</p>
@@ -119,16 +118,14 @@
 		if (onSite.style.marginTop == 77 + 'vw'){
 			onSite.style.marginTop = 66 + 'vw';
 			top.style.marginTop = 66 + 'vw';
-			onSite.style.zIndex = 5;
-			top.style.zIndex = 6;
+			onSite.style.zIndex = 6; top.style.zIndex = 5;
 			fieldImage.style.zIndex = -1;
 			topImage.style.zIndex = 1;
 		}
 		else{
 			onSite.style.marginTop = 77 + 'vw';
 			top.style.marginTop = 77 + 'vw';
-			onSite.style.zIndex = 6;
-			top.style.zIndex = 5;
+			onSite.style.zIndex = 5; top.style.zIndex = 6;
 			fieldImage.style.zIndex = 1;
 			topImage.style.zIndex = -1;
 		}
